@@ -23,12 +23,12 @@ document.getElementById("OpenedTime3").textContent = now3.toLocaleString("zh-TW"
     hour12: true    
 });
 */
-const TimePoint = new Date(2026, 10, 16);
-const TimePoint2 = new Date();
-const TimePoint3 = Math.trunc((TimePoint2-TimePoint)/86400000);
-document.getElementById("StartTime").textContent = TimePoint.toLocaleDateString("zh-TW");
-document.getElementById("Duration").textContent = TimePoint3.toLocaleString("zh-TW");
+const timePoint = new Date(2026, 10, 16);
+const timePoint2 = new Date();
+const timePoint3 = Math.trunc((timePoint2-timePoint)/86400000);
+document.getElementById("startTime").textContent = timePoint.toLocaleDateString("zh-TW");
+document.getElementById("duration").textContent = timePoint3.toLocaleString("zh-TW");
 
 const targetOfDay = new Date(2027, 4, 31);
-const targetOfTimes = Math.ceil ((targetOfDay-TimePoint2)/86400000); //不到一天也算一天 Ceil
+const targetOfTimes = Math.ceil ((targetOfDay-timePoint2)/86400000); //不到一天也算一天 Ceil
 document.getElementById("target").textContent = targetOfTimes.toLocaleString("zh-TW");
